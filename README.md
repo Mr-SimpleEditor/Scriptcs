@@ -19,7 +19,7 @@ syntax :
 
  scriptcs <File.cs>
 
-
+If get some error first try to use the script, if scriptcs is still visible then only it is failed otherwise it might be installed.
 
 If caught any error please let me know.
 
