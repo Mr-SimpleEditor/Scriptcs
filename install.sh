@@ -17,12 +17,12 @@ if [ -f '/etc/arch-release' ]; then
 	sudo pacman -S dotnet-sdk
 	sudo chmod +x scriptcs
 	sudo mv scriptcs /bin/
-if [ -f '/etc/fedora-release' ]; then
+elif [ -f '/etc/fedora-release' ]; then
 	sudo dnf install mono-devel
 	sudo dnf install nunit nunit-gui
 	sudo chmod +x scriptcs
         sudo mv scriptcs /bin/
-if [ -f '/etc/debian_version' ]; then
+elif [ -f '/etc/debian_version' ]; then
 	sudo apt install gnupg ca-certificates
 	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
 	echo "deb https://download.mono-project.com/repo/ubuntu stable-focal main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
@@ -30,12 +30,12 @@ if [ -f '/etc/debian_version' ]; then
 	sudo apt install mono-devel
 	sudo chmod +x scriptcs
         sudo mv scriptcs /bin/
-if [ -f '/etc/kali-release' ]; then
+elif [ -f '/etc/kali-release' ]; then
 	sudo apt-get install mono-complete
 	sudo apt install mono-devel
 	sudo chmod +x scriptcs
         sudo mv scriptcs /bin/
-if [ $OSTYPE == 'linux-android' ]; then
+elif [ $OSTYPE == 'linux-android' ]; then
 	apt update 
 	apt upgrade -y	
 	apt install mono
@@ -49,5 +49,5 @@ fi
 
 echo -e " ${G} Thanks for using"
 
-echo " ${Y} NOTE : Now your mono is installed which is automated for exectution of C#, script named as scriptcs. Now you can execute you file from anywhere, You can use vscode also without any problem"
+echo -e " ${Y} NOTE : Now your mono is installed which is automated for exectution of C#, script named as scriptcs. Now you can execute you file from anywhere, You can use vscode also without any problem"
 
