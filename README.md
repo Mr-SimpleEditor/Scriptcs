@@ -9,8 +9,9 @@ So to save this time i've created this scriptcs which contains the mono commands
 Steps to install :
 
 This command will install important packages and setup your scriptcs
- 
-1. sudo bash install.sh
+
+1. cd Scriptcs
+2. sudo bash install.sh
 
 Now you are ready to rock!
 
