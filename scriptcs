@@ -3,13 +3,5 @@
   
 elcs=$(echo $1 | sed 's/.cs//g') 
 mcs -out:$elcs.exe $1
-#sleep 1.0
 mono $elcs.exe
 
-#Got Errors:
-
-#sed -i 's/.cs//g' $1
-#fle=sed -i 's/.///g' $0
-#exfl=sed -i 's///g' $1
-#exfl= $1 | sed 's///g'
-#fle=$1
